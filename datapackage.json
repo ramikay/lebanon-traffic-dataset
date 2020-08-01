@@ -1,0 +1,132 @@
+{
+  "name": "lebanon-traffic-dataset",
+  "title": "Lebanon Traffic Dataset",
+  "description": "Road traffic data for Lebanon collected between 2014 and 2019.",
+  "profile": "tabular-data-package",
+  "version": "v1.0",
+  "licenses": [
+    {
+      "id": "ODbL-1.0",
+      "title": "Open Data Commons Open Database License 1.0",
+      "url": "https://opendefinition.org/licenses/odc-odbl"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tari'ak (طريقك) App",
+      "path": "http://tari2ak.com"
+    },
+    {
+      "title": "OpenStreetMap",
+      "path": "https://openstreetmap.org"
+    },
+    {
+      "title": "Overpass Turbo",
+      "path": "http://overpass-turbo.eu/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Rami Khawandi",
+      "email": "rami@tari2ak.com",
+      "path": "https://github.com/ramikay",
+      "role": "author"
+    }
+  ],
+  "resources": [
+    {      
+      "name": "velocities",
+      "title": "Velocities",
+      "format": "csv",
+      "encoding": "UTF-8",
+      "path": "data/velocities.csv",
+      "profile": "tabular-data-resource",
+      "mediatype": "text/csv",
+      "description": "Location and velocity data of devices in automotive transport, confined to the country of Lebanon.",
+      "licenses": [
+        {
+          "id": "ODbL-1.0",
+          "title": "Open Data Commons Open Database License 1.0",
+          "url": "https://opendefinition.org/licenses/odc-odbl"
+        }
+      ],
+      "schema": {
+        "fields": [
+          {
+            "name": "Date",
+            "title": "Date",
+            "type": "date",
+            "format": "default",
+            "description": "Date of when the data point was collected. Date values are reported in `Asia/Beirut` timezone."
+          },
+          {
+            "name": "Time",
+            "title": "Time",
+            "type": "time",
+            "format": "default",
+            "description": "Time of when the data point was collected. Time values are reported in `Asia/Beirut` timezone."
+          },
+          {
+            "name": "Coordinate (Lon, Lat)",
+            "title": "Coordinate",
+            "type": "geopoint",
+            "format": "default",
+            "description": "Coordinate of where the data point was collected. Coordinates are represented as `(longitude,latitude)`, and NOT `(latitude,longitude)`."
+          },
+          {
+            "name": "Course",
+            "title": "Course",
+            "type": "number",
+            "format": "default",
+            "description": "The direction in which the device was traveling when the data point was collected, measured in degrees starting at due north and continue clockwise around the compass. Thus, north is 0 degrees, east is 90 degrees, south is 180 degrees, and so on. Course values may not be available on all devices. A negative value indicates that the course information is invalid.",
+            "constraints": {
+              "minimum": "0",
+              "maximum": "360"
+            }
+          },
+          {
+            "name": "Velocity",
+            "title": "Velocity",
+            "type": "number",
+            "format": "default",
+            "description": "The velocity the device was traveling at when the data point was collected, measured in meters/second NOT kilometers/hour.",
+            "constraints": {
+              "minimum": "0"
+            }
+          },
+          {
+            "title": "Street ID",
+            "type": "string",
+            "format": "default",
+            "description": "The unique identifier for the street using its OpenStreetMap (OSM) ID. Streets are map-matched from OSM with a simple linear algebra algorithm using the device's coordinate and course."
+          }
+        ]
+      },
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\"",
+        "header": true,
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "skipInitialSpace": true,
+        "caseSensitiveHeader": false
+      }
+    },
+    {
+      "name": "streets",
+      "title": "Streets",
+      "format": "geojson",
+      "encoding": "UTF-8",
+      "path": "data/streets.geojson",
+      "mediatype": "application/json",
+      "description": "list of street features referenced in `velocities.csv` described in GeoJSON.",
+      "licenses": [
+        {
+          "id": "ODbL-1.0",
+          "title": "Open Data Commons Open Database License 1.0",
+          "url": "https://opendefinition.org/licenses/odc-odbl"
+        }
+      ]
+    }
+  ]
+}
