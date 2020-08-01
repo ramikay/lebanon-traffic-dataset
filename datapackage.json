@@ -34,7 +34,7 @@
     }
   ],
   "resources": [
-    {      
+    {
       "name": "velocities",
       "title": "Velocities",
       "format": "csv",
@@ -98,17 +98,18 @@
             "title": "Street ID",
             "type": "string",
             "format": "default",
-            "description": "The unique identifier for the street using its OpenStreetMap (OSM) ID. Streets are map-matched from OSM with a simple linear algebra algorithm using the device's coordinate and course."
+            "description": "The unique identifier for the street using its OpenStreetMap (OSM) ID. Streets are map-matched from OSM with a simple linear algebra algorithm using the device's coordinate and course.",
+            "name": "StreetID"
           }
         ]
       },
       "dialect": {
         "delimiter": ",",
-        "quoteChar": "\"",
-        "header": true,
         "doubleQuote": true,
         "lineTerminator": "\r\n",
+        "quoteChar": "\"",
         "skipInitialSpace": true,
+        "header": true,
         "caseSensitiveHeader": false
       }
     },
@@ -126,7 +127,19 @@
           "title": "Open Data Commons Open Database License 1.0",
           "url": "https://opendefinition.org/licenses/odc-odbl"
         }
-      ]
+      ],
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "title": "Streets GeoJSON",
+            "type": "geojson",
+            "description": "The fields in this resource are in GeoJSON format.",
+            "name": "Streets GeoJSON",
+            "format": "default"
+          }
+        ]
+      }
     }
   ]
 }
