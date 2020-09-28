@@ -1,6 +1,6 @@
 ## Lebanon Traffic Dataset
 
-This is a data package of automotive velocities on the roads of Lebanon, crowd-sourced using [Tari'ak (طريقك) mobile app](http://tari2ak.com) from a total of 17,274 smartphones. The data contains 6,007,042 points that span from March 20, 2014 to October 19, 2019.
+This is a data package of automotive velocities on the roads of Lebanon, crowd-sourced using [Tari'ak (طريقك) mobile app](http://tari2ak.com) from a total of 17,274 smartphones. The data contains 6,007,042 points that span from March 20, 2014 to October 17, 2019.
 
 ## Instructions
 
