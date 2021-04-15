@@ -1,6 +1,6 @@
 ## Instructions
 
-The easiest way to import this package is using one of the existing [Data Package Tools](http://frictionlessdata.io/tooling/data-package-tools).
+The easiest way to import this package is using one of the existing [Data Package Libraries](https://frictionlessdata.io/tooling/libraries/#data-package).
 
 You can also manually ingest the package resources, which is composed from 2 files:
 

@@ -1,10 +1,10 @@
 ## Lebanon Traffic Dataset
 
-This is a data package of automotive velocities on the roads of Lebanon, crowd-sourced using [Tari'ak (طريقك) mobile app](http://tari2ak.com) from a total of 17,274 smartphones. The data contains 6,006,041 points that span from March 20, 2014 to October 17, 2019.
+This is a data package of automotive velocities on the roads of Lebanon, crowd-sourced using [Tari'ak (طريقك) mobile app](http://tari2ak.com) from a total of 17,274 smartphones. The set contains 6,006,041 data points that span from March 20, 2014 to October 17, 2019.
 
 ## Instructions
 
-The easiest way to import this package is using one of the existing [Data Package Tools](http://frictionlessdata.io/tooling/data-package-tools).
+The easiest way to import this package is using one of the existing [Data Package Libraries](https://frictionlessdata.io/tooling/libraries/#data-package).
 
 You can also manually ingest the package resources, which is composed from 2 files:
 
