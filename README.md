@@ -4,7 +4,7 @@ This is a data package of automotive velocities on the roads of Lebanon, crowd-s
 
 ## Instructions
 
-The easiest way to import this package is using one of the existing [Data Package Libraries](https://frictionlessdata.io/tooling/libraries/#data-package).
+The easiest way to import this package is using one of the existing [Data Package Libraries](https://frictionlessdata.io/universe/).
 
 You can also manually ingest the package resources, which is composed from 2 files:
 
