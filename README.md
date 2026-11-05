@@ -3,6 +3,8 @@
 This is a data package of automotive velocities on the roads of Lebanon, crowd-sourced using [Tari'ak (طريقك) mobile app](http://tari2ak.com) from a total of 17,274 smartphones. The set contains 6,006,041 data points that span from March 20, 2014 to October 17, 2019.
 
 ## Instructions
+> [!NOTE]
+> This data set is now available on Hugging Face at https://huggingface.co/datasets/tari2ak/lebanon-traffic-dataset
 
 The easiest way to import this package is using one of the existing [Data Package Libraries](https://frictionlessdata.io/universe/).
 
